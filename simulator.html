@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pathogen</title>
+    <link rel="stylesheet" href="simulator.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="simulator.js"></script>
+</head>
+<body class="dash">
+<h2>
+    Simulation of Viral Spread in a Randomly Moving Population
+</h2>
+<br/>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <div>
+                <label class="uninfected" for="uninfected-count">Vulnerable Count:</label>
+                <span id="uninfected-count">0</span>
+            </div>
+            <div>
+                <label class="uninfected" for="uninfected-percent">Vulnerable Percent:</label>
+                <span id="uninfected-percent">0.0%</span>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div>
+                <label class="infected" for="infected-count">Infected Count:</label>
+                <span id="infected-count">0</span>
+            </div>
+            <div>
+                <label class="infected" for="infected-percent">Infected Percent:</label>
+                <span id="infected-percent">0.0%</span>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div>
+                <label class="contagious" for="contagious-count">Contagious Count:</label>
+                <span id="contagious-count">0</span>
+            </div>
+            <div>
+                <label class="contagious" for="contagious-percent">Contagious Percent:</label>
+                <span id="contagious-percent">0.0%</span>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div>
+                <label class="recovered" for="recovered-count">Recovered Count:</label>
+                <span id="recovered-count">0</span>
+            </div>
+            <div>
+                <label class="recovered" for="recovered-percent">Recoverd Percent:</label>
+                <span id="recovered-percent">0.0%</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg">
+        <canvas id="canvas" width="1200" height="600"></canvas>
+    </div>
+    <div class="col-lg">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radiogroup" id="checkboxDrawBarrier" value="drawBarrier"
+                   checked>
+            <label class="form-check-label" for="checkboxDrawBarrier">Draw New Walls</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radiogroup" id="checkboxEraseBarrier"
+                   value="eraseBarrier">
+            <label class="form-check-label" for="checkboxEraseBarrier">Erase Walls</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radiogroup" id="checkboxDrawInfected"
+                   value="drawInfected">
+            <label class="form-check-label" for="checkboxDrawInfected">Draw Infected Persons</label>
+        </div>
+        <div class="slider-group">
+            Infectious Coefficient (higher = more contagious)
+            <div id="infectious-slider"></div>
+        </div>
+        <div class="slider-group">
+            Mobility (how fast people move)
+            <div id="mobility-slider"></div>
+        </div>
+        <div class="slider-group">
+            Volatility (how randomly people move)
+            <div id="volatility-slider"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

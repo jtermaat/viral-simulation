@@ -1,0 +1,30 @@
+canvas {
+     background-color: black;
+ }
+
+.infected {
+    color: darkgoldenrod;
+}
+
+.contagious {
+    color: red;
+}
+
+.recovered {
+    color: darkblue;
+}
+
+.uninfected {
+    color: darkgreen;
+}
+
+body.dash {
+    background-color: black;
+    color: ghostwhite;
+    padding-left:20px;
+}
+
+div.slider-group {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
